@@ -85,16 +85,3 @@ class AiClient(
         }
     }
 }
-
-// ── Result type ───────────────────────────────────────────────────────────────
-
-sealed class SummaryResult {
-    data class Success(
-        val title: String,
-        val summary: String,
-        val inputTokens: Int,
-        val outputTokens: Int
-    ) : SummaryResult()
-
-    data class Error(val message: String) : SummaryResult()
-}
